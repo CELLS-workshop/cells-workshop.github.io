@@ -9,7 +9,8 @@
   --ink:       #101010;   /* body text */
   --ink-soft:  #666666;   /* bios, dates, secondary lines */
   --line:      #e3e3e3;
-  --link:      #31608f;   /* the blue of the mark, muted and darkened for text */
+  --link:      #336394;   /* the mark's blue, muted; kept 3:1 against body text so
+                             links stay identifiable without an underline */
   --green:     #3e7e0c;   /* the green of the mark; only the masthead rule uses it */
   --band:      #f5f9fd;   /* masthead and footer tint */
   --band-soft: #fafcfe;   /* next edition, a shade lighter than the banner */
@@ -98,13 +99,16 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
   overflow: hidden;
 }
 
-/* The same cells and strands as the mark, scattered and drifting behind the
-   masthead. Each shape is drawn around its own origin inside a positioning
-   <g>, so the CSS transform below rotates it in place without needing
-   transform-origin — see the note in the README. */
+/* A dense, translucent blue field of rod cells and strands drifting behind the
+   masthead. Each shape is drawn around its own origin inside a positioning <g>,
+   so the transforms below rotate it in place without needing transform-origin.
+
+   The viewBox is far wider than it needs to be (900 x 120). With slice, the scale
+   is max(width/900, height/120), so up to a 3000px window the height decides it:
+   widening the window reveals more of the field instead of magnifying it. */
 .banner-motif {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  opacity: .38; pointer-events: none;
+  opacity: .3; pointer-events: none;
   /* The shapes live in the right-hand part of the viewBox, and this fade keeps
      them clear of the logo and headings whatever the banner's width. */
   -webkit-mask-image: linear-gradient(to right, transparent 0 56%, #000 80%);
@@ -151,32 +155,23 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
   to   { transform: translate(6px, 0); }
 }
 
-.m1 { animation-name: swim2; animation-duration: 38s; animation-delay: -4s; }
-.m2 { animation-name: swim3; animation-duration: 42s; animation-delay: -6s; }
-.m3 { animation-name: float3; animation-duration: 34s; animation-delay: -16s; }
-.m4 { animation-name: float4; animation-duration: 54s; animation-delay: -32s; }
-.m5 { animation-name: float5; animation-duration: 50s; animation-delay: -9s; }
-.m6 { animation-name: float6; animation-duration: 45s; animation-delay: -11s; }
-.m7 { animation-name: float1; animation-duration: 36s; animation-delay: -4s; }
-.m8 { animation-name: float2; animation-duration: 37s; animation-delay: -37s; }
-.m9 { animation-name: float3; animation-duration: 52s; animation-delay: -32s; }
-.m10 { animation-name: float4; animation-duration: 51s; animation-delay: -8s; }
-.m11 { animation-name: swim3; animation-duration: 39s; animation-delay: -25s; }
-.m12 { animation-name: float6; animation-duration: 50s; animation-delay: -34s; }
-.m13 { animation-name: float1; animation-duration: 53s; animation-delay: -3s; }
-.m14 { animation-name: swim3; animation-duration: 47s; animation-delay: -27s; }
-.m15 { animation-name: swim1; animation-duration: 44s; animation-delay: -7s; }
-.m16 { animation-name: float4; animation-duration: 43s; animation-delay: -4s; }
-.m17 { animation-name: float5; animation-duration: 54s; animation-delay: -35s; }
-.m18 { animation-name: swim1; animation-duration: 45s; animation-delay: -12s; }
-.m19 { animation-name: float1; animation-duration: 54s; animation-delay: -23s; }
-.m20 { animation-name: float2; animation-duration: 53s; animation-delay: -34s; }
-.m21 { animation-name: float3; animation-duration: 44s; animation-delay: -17s; }
-.m22 { animation-name: float4; animation-duration: 46s; animation-delay: -17s; }
-.m23 { animation-name: swim3; animation-duration: 36s; animation-delay: -12s; }
-.m24 { animation-name: swim1; animation-duration: 52s; animation-delay: -2s; }
-.m25 { animation-name: swim2; animation-duration: 38s; animation-delay: -4s; }
-.m26 { animation-name: swim3; animation-duration: 42s; animation-delay: -6s; }
+/* Eight timing slots per shape type, rather than a rule per shape. */
+.m.a1 { animation-name: swim2; animation-duration: 43s; animation-delay: -15s; }
+.m.a2 { animation-name: swim3; animation-duration: 35s; animation-delay: -35s; }
+.m.a3 { animation-name: swim1; animation-duration: 32s; animation-delay: -20s; }
+.m.a4 { animation-name: swim2; animation-duration: 54s; animation-delay: -3s; }
+.m.a5 { animation-name: swim3; animation-duration: 45s; animation-delay: -25s; }
+.m.a6 { animation-name: swim1; animation-duration: 33s; animation-delay: -15s; }
+.m.a7 { animation-name: swim2; animation-duration: 49s; animation-delay: -18s; }
+.m.a8 { animation-name: swim3; animation-duration: 49s; animation-delay: -6s; }
+.m.b1 { animation-name: float2; animation-duration: 38s; animation-delay: -4s; }
+.m.b2 { animation-name: float3; animation-duration: 44s; animation-delay: -37s; }
+.m.b3 { animation-name: float4; animation-duration: 46s; animation-delay: -31s; }
+.m.b4 { animation-name: float5; animation-duration: 41s; animation-delay: -30s; }
+.m.b5 { animation-name: float6; animation-duration: 34s; animation-delay: -12s; }
+.m.b6 { animation-name: float1; animation-duration: 48s; animation-delay: -29s; }
+.m.b7 { animation-name: float2; animation-duration: 42s; animation-delay: -4s; }
+.m.b8 { animation-name: float3; animation-duration: 38s; animation-delay: -8s; }
 
 /* Two rods divide, half a cycle apart, so a division is always some way off.
    Each is drawn twice and the daughter copy comes first, so it emerges from
@@ -231,8 +226,10 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
   52%, 100% { transform: scale(1); }
 }
 
+/* !important is needed here: the per-shape rules above are .m.a1 and .daughter.right,
+   which outrank a plain .m selector and would otherwise keep their animation-name. */
 @media (prefers-reduced-motion: reduce) {
-  .m, .daughter, .mother { animation: none; }
+  .m, .daughter, .mother { animation: none !important; }
 }
 
 .masthead .container { position: relative; }
@@ -366,7 +363,6 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 .speaker__bio { color: var(--ink-soft); }
 .label { font-weight: var(--w-bold); }
 
-
 @media (max-width: 40rem) {
   .speaker { padding: 1.25rem; }
   .speaker__photo, .speaker__placeholder { float: none; margin: 0 0 1rem; }
@@ -389,7 +385,7 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 /* The banner motif again, blue and still, behind the footer. */
 .footer-motif {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  opacity: .3; pointer-events: none;
+  opacity: .26; pointer-events: none;
   -webkit-mask-image: linear-gradient(to right, transparent 0 42%, #000 70%);
           mask-image: linear-gradient(to right, transparent 0 42%, #000 70%);
 }
