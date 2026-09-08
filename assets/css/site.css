@@ -6,28 +6,28 @@
    ========================================================================== */
 
 :root {
-  --ink:       #101010;   /* body text */
-  --ink-soft:  #666666;   /* bios, dates, secondary lines */
+  --ink:       #101010;
+  --ink-soft:  #666666;
   --line:      #e3e3e3;
   --link:      #336394;   /* the mark's blue, muted; kept 3:1 against body text so
                              links stay identifiable without an underline */
   --green:     #3e7e0c;   /* the green of the mark; only the masthead rule uses it */
-  --band:      #f5f9fd;   /* masthead and footer tint */
+  --band:      #f5f9fd;
   --band-soft: #fafcfe;   /* next edition, a shade lighter than the banner */
-  --panel:     #f8f8f8;   /* speaker panels */
-  --panel-line:#e6e6e6;   /* hairline around the speaker panels */
-  --year:      #c9d2dc;   /* the large edition numerals */
+  --panel:     #f8f8f8;
+  --panel-line:#e6e6e6;
+  --year:      #c9d2dc;
 
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
           Arial, "Noto Sans", sans-serif;
 
   /* Type scale. Six steps, and nothing on the site uses a size outside them. */
-  --t-sm:   .95rem;      /* dates, affiliations, nav, footer */
-  --t-base: 1.0625rem;   /* body copy */
-  --t-md:   1.2rem;      /* tagline, plain h3 */
-  --t-lg:   1.4rem;      /* section headings, programme, talk titles */
+  --t-sm:   .95rem;
+  --t-base: 1.0625rem;
+  --t-md:   1.2rem;
+  --t-lg:   1.4rem;
   --t-xl:   clamp(1.45rem, 1.15rem + 1.4vw, 1.75rem);   /* speaker names */
-  --t-2xl:  clamp(1.85rem, 1.35rem + 2.4vw, 2.4rem);    /* page title, edition names, years */
+  --t-2xl:  clamp(1.85rem, 1.35rem + 2.4vw, 2.4rem);
 
   /* Three weights only: light for display, regular for text, semibold for emphasis. */
   --w-display: 300;
@@ -35,7 +35,7 @@
   --w-bold:    600;
 
   --tracking-display: -.02em;   /* tightening, applied only at --t-2xl */
-  --measure: 44rem;       /* reading width */
+  --measure: 44rem;
   --page: 76rem;
 }
 
@@ -88,9 +88,6 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 @media (min-width: 46rem) { .nav { margin-left: auto; } }
 
 /* --- Masthead ----------------------------------------------------------- */
-/* Pale tinted band. The drifting cells behind it are an inline <svg> in the
-   page markup, styled as .banner-motif below. */
-
 .masthead {
   position: relative;
   background: var(--band);
@@ -99,14 +96,7 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
   overflow: hidden;
 }
 
-/* A dense, translucent blue field of rod cells and strands drifting behind the
-   masthead. Each shape is drawn around its own origin inside a positioning <g>,
-   so the transforms below rotate it in place without needing transform-origin.
-
-   The viewBox is far wider than it needs to be (900 x 120). With slice, the scale
-   is max(width/900, height/120), so up to a 3000px window the height decides it:
-   widening the window reveals more of the field instead of magnifying it. */
-.banner-motif {
+.banner-motif, .banner-motif img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   opacity: .3; pointer-events: none;
   /* The shapes live in the right-hand part of the viewBox, and this fade keeps
@@ -115,122 +105,8 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
           mask-image: linear-gradient(to right, transparent 0 56%, #000 80%);
 }
 
-.m { animation: 22s ease-in-out infinite alternate; }
-
-@keyframes float1 {
-  from { transform: translate(4px, -2px) rotate(9deg); }
-  to   { transform: translate(-4px, 2px) rotate(-9deg); }
-}
-@keyframes float2 {
-  from { transform: translate(-3.5px, -3px) rotate(-7deg); }
-  to   { transform: translate(3.5px, 3px) rotate(7deg); }
-}
-@keyframes float3 {
-  from { transform: translate(3px, 3.5px) rotate(-10deg); }
-  to   { transform: translate(-3px, -3.5px) rotate(10deg); }
-}
-@keyframes float4 {
-  from { transform: translate(-4.5px, 1.5px) rotate(7deg); }
-  to   { transform: translate(4.5px, -1.5px) rotate(-7deg); }
-}
-@keyframes float5 {
-  from { transform: translate(-2.5px, -4px) rotate(11deg); }
-  to   { transform: translate(2.5px, 4px) rotate(-11deg); }
-}
-@keyframes float6 {
-  from { transform: translate(4.5px, 1px) rotate(-6deg); }
-  to   { transform: translate(-4.5px, -1px) rotate(6deg); }
-}
-
-@keyframes swim1 {
-  from { transform: translate(-5px, .6px); }
-  to   { transform: translate(5px, -.6px); }
-}
-@keyframes swim2 {
-  from { transform: translate(-3.5px, -1px); }
-  to   { transform: translate(3.5px, 1px); }
-}
-@keyframes swim3 {
-  from { transform: translate(-6px, 0); }
-  to   { transform: translate(6px, 0); }
-}
-
-/* Eight timing slots per shape type, rather than a rule per shape. */
-.m.a1 { animation-name: swim2; animation-duration: 43s; animation-delay: -15s; }
-.m.a2 { animation-name: swim3; animation-duration: 35s; animation-delay: -35s; }
-.m.a3 { animation-name: swim1; animation-duration: 32s; animation-delay: -20s; }
-.m.a4 { animation-name: swim2; animation-duration: 54s; animation-delay: -3s; }
-.m.a5 { animation-name: swim3; animation-duration: 45s; animation-delay: -25s; }
-.m.a6 { animation-name: swim1; animation-duration: 33s; animation-delay: -15s; }
-.m.a7 { animation-name: swim2; animation-duration: 49s; animation-delay: -18s; }
-.m.a8 { animation-name: swim3; animation-duration: 49s; animation-delay: -6s; }
-.m.b1 { animation-name: float2; animation-duration: 38s; animation-delay: -4s; }
-.m.b2 { animation-name: float3; animation-duration: 44s; animation-delay: -37s; }
-.m.b3 { animation-name: float4; animation-duration: 46s; animation-delay: -31s; }
-.m.b4 { animation-name: float5; animation-duration: 41s; animation-delay: -30s; }
-.m.b5 { animation-name: float6; animation-duration: 34s; animation-delay: -12s; }
-.m.b6 { animation-name: float1; animation-duration: 48s; animation-delay: -29s; }
-.m.b7 { animation-name: float2; animation-duration: 42s; animation-delay: -4s; }
-.m.b8 { animation-name: float3; animation-duration: 38s; animation-delay: -8s; }
-
-/* Two rods divide, half a cycle apart, so a division is always some way off.
-   Each is drawn twice and the daughter copy comes first, so it emerges from
-   behind its parent: the pair shrinks as the cell divides and grows back to full
-   size once they have parted. One daughter leaves through the right-hand edge, the
-   other through the bottom. Neither path is hand-drawn: a run-and-tumble simulation
-   (velocity with inertia, occasional tumbles) was run offline and sampled into
-   keyframes, each keyframe's rotation set to the heading of travel, so a cell
-   always points where it is going. */
-.daughter       { animation: 100s linear infinite; }
-.daughter.right { animation-name: divideRight; }
-.daughter.down  { animation-name: divideDown; animation-delay: -50s; }
-.mother         { animation: mother 100s linear infinite; }
-.mother.down    { animation-delay: -50s; }
-
-@keyframes divideRight {
-  0%, 30%  { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
-  40%   { transform: translate(9px, 0) scale(.62) rotate(0deg); opacity: 1; }
-  52%   { transform: translate(14px, 0) scale(1) rotate(0deg); opacity: 1; }
-  60%   { transform: translate(20px, 0.4px) scale(1) rotate(6deg); opacity: 1; }
-  65%   { transform: translate(29px, 2.2px) scale(1) rotate(18deg); opacity: 1; }
-  69%   { transform: translate(38px, 6.1px) scale(1) rotate(26deg); opacity: 1; }
-  74%   { transform: translate(47px, 8.5px) scale(1) rotate(0deg); opacity: 1; }
-  78%   { transform: translate(56px, 8.6px) scale(1) rotate(-0deg); opacity: 1; }
-  83%   { transform: translate(66px, 8.1px) scale(1) rotate(-14deg); opacity: 1; }
-  87%   { transform: translate(75px, 4.7px) scale(1) rotate(-20deg); }
-  92%   { transform: translate(84px, 3.9px) scale(1) rotate(10deg); }
-  96%   { transform: translate(93px, 5.4px) scale(1) rotate(-8deg); opacity: 0; }
-  100%  { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0; }
-}
-
-@keyframes divideDown {
-  0%, 30%  { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 1; }
-  40%   { transform: translate(9px, 0) scale(.62) rotate(0deg); opacity: 1; }
-  52%   { transform: translate(14px, 0) scale(1) rotate(0deg); opacity: 1; }
-  60%   { transform: translate(17px, 0.0px) scale(1) rotate(3deg); opacity: 1; }
-  65%   { transform: translate(21px, 0.4px) scale(1) rotate(6deg); opacity: 1; }
-  69%   { transform: translate(25px, 1.0px) scale(1) rotate(15deg); opacity: 1; }
-  74%   { transform: translate(30px, 2.7px) scale(1) rotate(22deg); opacity: 1; }
-  78%   { transform: translate(34px, 4.5px) scale(1) rotate(24deg); opacity: 1; }
-  83%   { transform: translate(39px, 6.7px) scale(1) rotate(24deg); opacity: 1; }
-  87%   { transform: translate(43px, 8.5px) scale(1) rotate(24deg); }
-  92%   { transform: translate(47px, 9.0px) scale(1) rotate(22deg); }
-  96%   { transform: translate(52px, 9.0px) scale(1) rotate(20deg); opacity: 0; }
-  100%  { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0; }
-}
-
-/* The parent shrinks as it divides, then grows back with its daughter. */
-@keyframes mother {
-  0%, 30%  { transform: scale(1); }
-  40%      { transform: scale(.62); }
-  52%, 100% { transform: scale(1); }
-}
-
-/* !important is needed here: the per-shape rules above are .m.a1 and .daughter.right,
-   which outrank a plain .m selector and would otherwise keep their animation-name. */
 @media (prefers-reduced-motion: reduce) {
-  .m, .daughter, .mother { animation: none !important; }
-}
+  .m, }
 
 .masthead .container { position: relative; }
 .masthead__logo { width: min(100%, 38rem); display: block; margin-bottom: 1.25rem; }
@@ -247,7 +123,6 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 }
 
 /* --- Sections: heading in the left column, as on the original site ------ */
-/* Sections are separated by a hairline carrying a small cell glyph. */
 
 .section { position: relative; padding: 2.25rem 0; border-top: 1px solid var(--line); }
 .section::before {
@@ -259,9 +134,8 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 .section:first-of-type { border-top: 0; }
 .section:first-of-type::before { display: none; }
 
-/* The next edition's section is tinted the full width of the window, filling the
-   space between the rule above it and the rule below. The cell glyph sits astride
-   those rules, so it is filled half in one ground and half in the other. */
+/* Tinted the full width of the window. The cell glyph straddles the rule, so it
+   is filled half in one ground and half in the other. */
 .section--next { background: var(--band-soft); }
 .section--next::before {
   background: linear-gradient(to bottom, #fff 50%, var(--band-soft) 50%);
@@ -292,7 +166,6 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
   letter-spacing: var(--tracking-display); color: var(--year); margin: 0;
 }
 .edition__body > :last-child { margin-bottom: 0; }
-/* The next edition is set bolder than the ones that have happened. */
 .edition--next .edition__name { font-weight: var(--w-bold); }
 .edition--next .edition__year { font-weight: var(--w-body); color: var(--ink-soft); }
 
@@ -301,8 +174,7 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
   letter-spacing: var(--tracking-display);
 }
 .edition__when { margin: 0 0 .45rem; color: var(--ink-soft); font-size: var(--t-sm); }
-/* The DISC links sit inside this line, so they take its colour and are marked
-   only by the hover underline every other link gets. */
+/* The DISC links take this line's colour; only the hover underline marks them. */
 .edition__when a { color: inherit; }
 .edition__people { margin: 0 0 .3rem; }
 .edition__people:last-child { margin-bottom: 0; }
@@ -314,8 +186,6 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 
 /* --- Programme ---------------------------------------------------------- */
 
-/* Built like the editions list on the index — a numeral in the gutter, a
-   hairline, then the entry — but at a smaller scale. */
 .programme { list-style: none; padding: 0; margin: 0; --time-col: 4.5rem; }
 .programme > li { display: grid; grid-template-columns: 1fr; gap: .2rem; margin: 0 0 1.5rem; }
 .programme > li:last-child { margin-bottom: 0; }
@@ -335,8 +205,6 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 
 /* --- Speakers ----------------------------------------------------------- */
 
-/* Each speaker sits on its own panel: a hairline and a pale neutral ground,
-   no shadow, no rounded corners. */
 .speaker {
   background: var(--panel);
   border: 1px solid var(--panel-line);
@@ -360,7 +228,6 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 .speaker__name { margin: 0 0 .25rem; font-size: var(--t-xl); font-weight: var(--w-bold); }
 .speaker__affiliation { color: var(--ink-soft); font-size: var(--t-sm); margin: 0 0 .7rem; }
 .speaker__title { color: var(--ink); margin: 0 0 1rem; font-size: var(--t-lg); font-weight: var(--w-bold); }
-.speaker__bio { color: var(--ink-soft); }
 .label { font-weight: var(--w-bold); }
 
 @media (max-width: 40rem) {
@@ -374,15 +241,13 @@ a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
 .plain > li { margin: 0 0 .8rem; }
 .plain .where { color: var(--ink-soft); font-size: var(--t-sm); }
 
-.todo { color: var(--ink-soft); }
-
 /* --- Footer ------------------------------------------------------------- */
 
 .site-footer { position: relative; overflow: hidden; background: var(--band);
                border-top: 1px solid var(--line); margin-top: 2.5rem; padding: 2rem 0 3.25rem;
                color: var(--ink-soft); font-size: var(--t-sm); }
 
-/* The banner motif again, blue and still, behind the footer. */
+/* The same field as the banner, standing still. */
 .footer-motif {
   position: absolute; inset: 0; width: 100%; height: 100%;
   opacity: .26; pointer-events: none;
