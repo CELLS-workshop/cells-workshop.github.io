@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="41" viewBox="0 0 900 41" preserveAspectRatio="xMaxYMid slice">
+<defs><rect id="c-rod" x="-6" y="-2.3" width="12" height="4.6" rx="2.3" fill="#31608f" fill-opacity=".22" stroke="#31608f" stroke-opacity=".6" stroke-width=".9"/><path id="c-strand" d="M-7.5 0C-4.5-3-2 3 0 0 2-3 4.5 3 7.5 0" fill="none" stroke="#31608f" stroke-opacity=".6" stroke-width=".9" stroke-linecap="round"/></defs>
+    <g transform="translate(865 23) rotate(242) scale(1.076)"><use href="#c-strand"/></g>
+    <g transform="translate(640 10) rotate(187) scale(1.006)"><use href="#c-strand"/></g>
+    <g transform="translate(438 9) rotate(66) scale(1.039)"><use href="#c-rod"/></g>
+    <g transform="translate(790 25) rotate(154) scale(0.906)"><use href="#c-rod"/></g>
+    <g transform="translate(340 25) rotate(191) scale(0.991)"><use href="#c-strand"/></g>
+    <g transform="translate(671 15) rotate(200) scale(0.986)"><use href="#c-rod"/></g>
+    <g transform="translate(643 28) rotate(281) scale(0.930)"><use href="#c-rod"/></g>
+    <g transform="translate(471 26) rotate(306) scale(1.051)"><use href="#c-rod"/></g>
+    <g transform="translate(838 21) rotate(242) scale(0.915)"><use href="#c-strand"/></g>
+    <g transform="translate(707 10) rotate(261) scale(1.080)"><use href="#c-rod"/></g>
+    <g transform="translate(545 8) rotate(16) scale(1.003)"><use href="#c-rod"/></g>
+    <g transform="translate(425 27) rotate(219) scale(1.000)"><use href="#c-rod"/></g>
+    <g transform="translate(593 7) rotate(197) scale(1.059)"><use href="#c-rod"/></g>
+    <g transform="translate(891 15) rotate(75) scale(0.950)"><use href="#c-rod"/></g>
+    <g transform="translate(801 8) rotate(279) scale(0.952)"><use href="#c-strand"/></g>
+    <g transform="translate(758 32) rotate(305) scale(0.938)"><use href="#c-rod"/></g>
+    <g transform="translate(825 15) rotate(61) scale(0.981)"><use href="#c-strand"/></g>
+    <g transform="translate(386 12) rotate(253) scale(0.965)"><use href="#c-rod"/></g>
+    <g transform="translate(441 33) rotate(94) scale(1.059)"><use href="#c-strand"/></g>
+    <g transform="translate(718 22) rotate(233) scale(1.016)"><use href="#c-strand"/></g>
+    <g transform="translate(806 26) rotate(96) scale(1.031)"><use href="#c-rod"/></g>
+    <g transform="translate(620 33) rotate(42) scale(0.990)"><use href="#c-rod"/></g>
+    <g transform="translate(876 8) rotate(262) scale(1.080)"><use href="#c-rod"/></g>
+    <g transform="translate(770 14) rotate(187) scale(1.063)"><use href="#c-rod"/></g>
+    <g transform="translate(512 13) rotate(42) scale(0.969)"><use href="#c-strand"/></g>
+    <g transform="translate(395 26) rotate(299) scale(0.911)"><use href="#c-strand"/></g>
+    <g transform="translate(408 7) rotate(212) scale(1.016)"><use href="#c-strand"/></g>
+    <g transform="translate(486 13) rotate(283) scale(1.059)"><use href="#c-rod"/></g>
+    <g transform="translate(345 10) rotate(259) scale(0.985)"><use href="#c-rod"/></g>
+    <g transform="translate(567 18) rotate(233) scale(1.053)"><use href="#c-rod"/></g>
+    <g transform="translate(692 21) rotate(273) scale(0.955)"><use href="#c-rod"/></g>
+    <g transform="translate(608 19) rotate(121) scale(0.977)"><use href="#c-strand"/></g>
+    <g transform="translate(505 29) rotate(64) scale(0.931)"><use href="#c-strand"/></g>
+    <g transform="translate(856 6) rotate(32) scale(0.942)"><use href="#c-strand"/></g>
+    <g transform="translate(521 34) rotate(340) scale(1.014)"><use href="#c-rod"/></g>
+    <g transform="translate(886 31) rotate(351) scale(1.017)"><use href="#c-rod"/></g>
+</svg>
