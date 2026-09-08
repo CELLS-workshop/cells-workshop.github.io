@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>CELLS Workshop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,900,900italic" rel="stylesheet">
+    <style>
+      .mySlides {
+        display:none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <center>
+
+      <!-- Header -->
+      <header id="header">
+
+      	<nav id="nav">
+      	  <ul>
+            <li><a href="https://parsys.lri.fr/CELLS/">CELLS main page</a></li>
+            <li><a href="#page_disc">DISC'19</a></li>
+      	    <li><a href="#page_scope">Scope</a></li>
+      	    <li><a href="#page_program">Program</a></li>
+            <li><a href="#page_local">Local</a></li>
+      	    <li><a href="#page_commitee">Commitee</a></li>
+            <li><a href="#page_sponsors">Sponsors</a></li>
+      	  </ul>
+      	</nav>
+
+      </header>
+
+      <!-- Toggle Menu -->
+      <a href="#menu" class="navPanelToggle">
+      	<img src="logos/menu.svg"/>
+      </a>
+	
+      <!-- Main part --> 
+      <section id="main">
+        
+        <!-- main page -->
+        <section class="page contentheight" id="first_page">
+        
+
+          <div class="bannerdiv">
+           <img src="images/cells.svg" class="bannerimage">
+          <span class="caption">CELLS: Workshop on Computing among Cells</span>
+          <span class="caption2">October 14th, 2019 in Budapest, Hungary<br><br></span>
+          </div>
+
+        </section>
+
+        <section class="page contentheight" id="page_disc">
+
+          <h1>DISC'19</h1>
+          <div class="rightcol">
+            <h1 class="alt">DISC'19</h1>
+            <p>
+            CELLS is a DISC 2019 workshop. Please see <a href="http://www.disc-conference.org/wp/disc2019/workshops/" class="alt">the DISC page</a> for further information.
+            </p>
+          </div>
+
+        </section>
+
+        <!-- page 2 -->
+        <section class="page contentheight" id="page_scope">
+
+          <h1>Scope</h1>
+          <div class="rightcol">
+          	<h1 class="alt">Scope</h1>
+<p>
+The workshop is intended to cover topics both from computer science and microbiology with a focus on computation emerging from microbiological units (bacteria, viruses, DNA, etc.) interacting with each other.
+</p>
+<p>
+Topics include, but are not limited to: synthetic biology, bacterial computing, DNA computing, population protocols, Markov chains, modeling with cellular automata, infection models, and evolutionary models.
+</p>
+          </div>
+
+        </section>
+
+
+        <!-- page -->
+        <section class="page contentheight" id="page_speakers">
+          <h1>Speakers</h1>
+          <div class="rightcol">
+            <h1 class="alt">Speakers</h1>
+      	    <!-- <p>Confirmed Speakers:</p> -->
+              
+              <hr>
+              <p>
+              <a href="https://www.lri.fr/membre.php?mb=1614" class="alt2">
+              Janna Burman (Université Paris-Saclay)
+              </a><br>
+              <div class="title">Tutorial on Population Protocols.</div>
+              </p>
+              <p class="bio"><img src="images/jb.png" class="rightimg">
+              Janna Burman is an assistant professor (Maître de Conference) in Computer Science at South-Paris University, since 2013. She received her Ph.D. in 2010 from Technion - Israel Institute of Technology, and did her post-docs at INRIA Sophia-Antipolis (2010 - 2011) and INRIA-Saclay (2011-2013). She is carrying out her research at LRI - Laboratoire de Recherche en Informatique, in the Parallel Systems team. Her main research interests are distributed algorithms and systems, with a particular focus on networks of mobile agents, self-stabilization, fault-tolerance, population protocols and the beeping model.  
+              </p>
+              <p>
+              <b>Abstract.</b>
+              The communication model of population protocols is a popular model of distributed computing. It describes a collection of anonymous and identically programmed computational nodes interacting in pairs. Their interactions are scheduled by an adversary, subject to a fairness constraint. In an interaction, the two agents exchange and update their internal states, according to a transition function (the protocol).
+              This model is motivated by mobile ad-hoc networks of highly-restricted computational nodes with little control over their movements. It bears a strong resemblance to models of chemical reactions (CRNs), gene regulatory networks, Petri nets, and many more.
+              In this tutorial, we will give the basics of population protocols and an overview of what can be computed and which distributed tasks can be solved in this model and its variants. We will also discuss its relation to CRNs.
+              </p>
+              <br>
+
+              <hr>
+              <p>
+              <a href="https://www.ucl.ac.uk/~ucbpafe/" class="alt2">
+              Alexander Fedorec (University College London)
+              </a><br>
+              <div class="title">Constructing Synthetic Microbial Communities.</div>
+              </p>
+              <p class="bio"><img src="images/af.png" class="rightimg">
+              Alex is a Research Fellow at University College London in the Division of Biosciences. His current focus is on the design of synthetic microbial communities and their application in healthcare and industrial biotechnology. He received his PhD in Synthetic Biology from University College London and his Masters degree in Modelling Biological Complexity from the same institution. His Bachelor's degree in Computer Science was undertaken at the University of Bath, where he developed an interest in using models to understand Natural Intelligence. He has worked in industry as a software engineer for Research In Motion (now BlackBerry).
+              </p>
+              <p>
+              <b>Abstract.</b> Synthetic biology has largely focused on developing ever more complex, robust or sensitive genetic circuits to carry out a multitude of functions from computation to bio-production within a single host strain. However, it has long been known that there are limits to what can be achieved due, primarily, to increased burden. As such, the distribution of genetic circuits between multiple strains within a community can be used as a method to reduce the burden on individual cells, along with many other potential advantages. However, due to the principle of competitive exclusion, maintaining multiple strains within a community is a non-trivial task to which no satisfactory solution has yet been developed. Here, we will discuss a number of different mechanisms that may enable co-existence. We will demonstrate the use of reinforcement learning to train an agent to control an environment in order to allow two or more species to be held at desired population densities. Further, for applications in which we have no environmental control, we will illustrate a Bayesian method that allows us to explore vast model spaces in order to choose system designs that can feasibly produce stable communities. Finally, we will demonstrate the process of instantiating one such system and verifying its function. As the systems that we design become more complex, control will be needed at the community as well as the cellular level and approaches such as these will become ever more critical.
+              </p>
+              <br>
+
+              <hr>
+              <p>
+              <a href="http://www.bristol.ac.uk/brissynbio/people/thomas-e-gorochowski/overview.html" class="alt2">
+              Thomas Gorochowski (University of Bristol)
+              </a><br>
+              <div class="title">Towards a Complete and Quantitative View of Genetic Circuit Function.</div>
+              </p>
+              <p class="bio"><img src="images/tg.jpg" class="rightimg">
+              Thomas Gorochowski is a Royal Society University Research Fellow at the University of Bristol, UK and heads up the Biocompute Lab (<a href="http://www.biocomputelab.org">www.biocomputelab.org</a>) within the School of Biological Sciences. His research is focused on better understanding the computational architecture of biological systems from the molecular to ecosystem level and developing tools to enable the rational engineering of new functionalities across these scales.  
+              </p>
+              <p>
+              <b>Abstract.</b> Synthetic genetic circuits are composed of many interconnected parts that must function together in concert to implement desired biological computations. A major challenge when developing new circuits is that genetic parts often display unexpected changes in their performance when used in new ways. These arise due to contextual effects or unintended interactions with the host cell. In this talk, I will demonstrate how we have been using sequencing technologies and mathematical modelling to tackle this problem. First, I will show how RNA-sequencing can be used to measure the function of every transcriptional part making up large genetic circuits. This enables us to better understand why some designs fail and helps pin point the root cause. Then, I will present some recent work where we combined RNA-sequencing with ribosome profiling and RNA spike-in standards to enable the first large-scale characterisation of transcriptional and translational parts in absolute units. Such capabilities provide a more complete and quantitative view of the inner workings of genetic circuits and improve our understanding of the rules governing the effective construction of larger and more complex biological systems.
+              </p>
+              <br>
+              
+              <hr>
+              <p>
+              <a href="https://warwick.ac.uk/fac/sci/lifesci/people/ajaramillo/" class="alt2">Alfonso Jaramillo (University of Warwick)
+              </a><br>
+              <div class="title">On Computing among Cells</div>
+              </p>
+              <p class="bio"><img src="images/aj.png" class="rightimg">
+              After a PhD in Particle Physics (1999), AJ he worked on the computational design of proteins, using molecular modeling techniques. Afterwards, after moving as Assistant Professor to Ecole Polytechnique, he developed computational design methods for metabolic networks, transcriptional networks, and particularly RNA networks. In 2009, after moving to CNRS-Genopole as senior researcher, he started his experimental microbiology lab where he could validate experimentally his computational methodologies. He then developed and used automated microscopy and microfluidics chips for single-cell validations. In 2013, he moved to the University of Warwick as Full Professor, where he is developing new cell-culture bioreactors for directed evolution, which he applies to engineer the first synthetic bacteriophage. He also is developing a novel gene regulation relying on RNA. He has coordinated several Synthetic Biology international consortia and he is member of the editorial boards of ACS Synthetic Biology and the J. of Biol. Engineering.
+              </p>
+
+              <hr>
+              <p>
+              <a href="https://scholar.google.com/citations?user=JsXHBggAAAAJ&hl=en" class="alt2">Manish Kushwaha (Micalis Institute, INRA)
+              </a><br>
+              <div class="title">Tutorial on Computing in Synthetic Biology</div>
+              </p>
+              <p class="bio"><img src="images/mk.jpg" class="rightimg">
+	      Manish Kushwaha is a Research Scientist (Chargé de Recherche) at the Micalis Institute, INRA Jouy-en-Josas, France. His research interests lie in the areas of synthetic biology, systems biology, and metabolic engineering. More specifically, his work is focussed on improving the predictable and automatable design of intra- and intercellular synthetic genetic circuits and metabolic pathways, while expanding their cross-species compatibility.
+              </p>
+              <p>
+              <b>Abstract.</b> In the last two decades, Synthetic Biology has seen the development of several biological circuits and devices for a wide variety of applications. These have been implemented at different layers of biological information processing: the genetic layer, the metabolic layer, or the signal transduction layer. Taking early inspiration from electronics, most biological circuits in this time have used a digital abstraction of input-output signals while still using a relatively analogue machinery. In this tutorial, I will present an overview of how ideas from engineering and computing have been applied in synthetic biology so far, and what may be possible in the future.    
+
+              </p>
+
+              <hr>
+              <p>
+	      <a href="http://www.cbs.cnrs.fr/index.php/en/people-index?PERS=Ana%20Zuniga" class="alt2">Ana Zuniga-Sepulveda (Centre de Biochimie Structurale de Montpellier)
+	      </a><br>
+              <div class="title">Rational programming of history-dependent logic in cellular populations</div>
+              </p>
+              <p class="bio"><img src="images/az.jpg" class="rightimg">
+              Ana is a postdoctoral researcher in the synthetic biology team of Jerome Bonnet at the Centre de Biochimie Structurale in Montpellier, France. She received her PhD in Biological sciences from Pontifical Catholic University of Chile and did her first postdoctoral research with Gonzalo Ruz in the Faculty of Engineering and Sciences at Universidad Adolfo Ibáñez, applying Boolean networks and gene regulatory networks in synthetic bacterial consortium. Now she is focused on the engineering of synthetic organism with rich signal processing abilities, applying genetic logic devices. She is implementing distributed multicellular computation as a tool to systematize the genetic circuit design, reuse biological components, and obtain predictable behavior in engineered bacteria. 
+              </p>
+              <p>
+              <b>Abstract.</b> Genetic programs operating in a history-dependent fashion are ubiquitous in nature and govern sophisticated processes such as development and differentiation. The ability to systematically and predictably encode such programs would advance the engineering of synthetic organisms and ecosystems with rich signal processing abilities. Here we implement robust, scalable history-dependent programs by distributing the computational labor across a cellular population. Our design is based on recombinase-driven DNA scaffolds expressing different genes according to the order of occurrence of inputs. These multicellular computing systems are highly modular and any program can be built by differential composition of strains containing well-characterized logic scaffolds. We developed an automated workflow that researchers can use to streamline program design and optimization. We anticipate that the history-dependent programs presented here will support many applications using cellular populations for material engineering, biomanufacturing and healthcare.
+              </p>
+
+      	  </div>
+	       </section>
+	
+
+        <!-- page -->
+        <section class="page contentheight" id="page_program">
+
+          <h1>Program</h1>
+          <div class="rightcol">
+            <h1 class="alt">Program</h1>
+            <p>
+            Talks on October 14th, 2019:
+            </p>
+            <ul>
+<li>09.00: <b>Janna Burman: Tutorial on Population Protocols</b></li>
+<li>10.00: Coffee break</li>
+<li>10.30: <b>Manish Kushwaha: Tutorial on Computing in Synthetic Biology</b></li>
+<li>11.30: <b>Thomas Gorochowski: Towards a Complete and Quantitative View of Genetic Circuit Function</b></li>
+<li>12.30: Lunch break</li>
+<li>14.00: <b>Alexander Fedorec: Constructing Synthetic Microbial Communities</b></li>
+<li>15.00: <b>Ana Zuniga-Sepulveda: Rational programming of history-dependent logic in cellular populations</b></li>
+<li>16.00: Coffee break</li>
+<li>16.30: <b>Alfonso Jaramillo</b></li>
+<li>17.30: <b>Discussion: Perspectives and Open Problems</b></li>
+            </ul>
+            </p>
+          </div>
+
+        </section>
+
+
+        <section class="page contentheight" id="page_local">
+
+          <h1>Local</h1>
+          <div class="rightcol">
+            <h1 class="alt">Local</h1>
+            <p>
+            For local information please consult the <a href="http://www.disc-conference.org/wp/disc2019/location-information/" class="alt">DISC local information</a> page.
+            </p>
+          </div>
+
+        </section>
+
+        <!-- page -->
+        <section class="page contentheight" id="page_commitee">
+
+          <h1>Commitee</h1>
+          <div class="rightcol">
+            <h1 class="alt">Commitee</h1>
+            <p>
+            <a href="http://www.lsv.fr/~mfuegger/" class="alt">Matthias F&uuml;gger</a>,
+            CNRS & LSV, ENS Paris-Saclay & Inria
+            </p>
+            <p>
+            <a href="https://www.irif.fr/~kosowski/" class="alt">Adrian Kosowski</a>,
+            Inria & IRIF
+            </p>
+            <p>
+            <a href="https://www.micalis.fr/micalis_eng/Poles-and-teams/Pole-Systems-and-Synthetic-Microbiology/Metabolic-Engineering-by-Retro-Synthesis-Jean-Loup-Faulon/Team-members/Manish-Kushwaha" class="alt">Manish Kushwaha</a>, INRA & Micalis Institute 
+            </p>
+            <p>
+            <a href="https://www.lri.fr/~nowak/" class="alt">Thomas Nowak</a>,
+            Universit&eacute; Paris-Sud<br><br>
+            </p>
+          </div>
+
+        </section>
+
+        <!-- page -->
+        <section class="page contentheight" id="page_sponsors">
+
+          <h1>Sponsors</h1>
+          <div class="rightcol">
+            <h1 class="alt">Sponsors</h1>
+            
+            <p>
+            <a href="https://digicosme.lri.fr/tiki-index.php">
+              <img src="logos/logo-DigiSaclaysmall.png" width="150"><br>
+            </a> DigiCosme (working group <a href="https://parsys.lri.fr/HicDiesMeus/">HicDiesMeus</a>)
+            </p>
+
+            <p>
+            <a href="https://www.universite-paris-saclay.fr/fr/recherche/departement/sciences-et-technologies-de-linformation-et-de-la-communication-stic">
+              <img src="logos/ups.svg" width="150"><br>
+            </a>Universite Paris-Saclay, Projets Emergents 2019 du Departement STIC (Depec Mode)
+            </p>
+            <br>
+            <br>
+            <br>
+
+          </div>
+
+        </section>
+
+
+      </section>
+
+
+    </center>
+      
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.js"></script>
+    <script src="assets/js/skel-layout.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+	
+
+    </script>
+    
+  </body>
+</html>
