@@ -9,7 +9,6 @@
     content="CELLS'26, the workshop on Computing among Cells, on 9 November 2026 in Rome, Italy, with DISC 2026. Scope, programme, invited speakers and registration.">
   <link rel="icon" href="../assets/img/cells.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/site.css">
-  <!-- CELLS'26. Outstanding items are marked TODO below. -->
 </head>
 
 <body>
@@ -52,7 +51,7 @@
     <section class="section" aria-labelledby="scope">
       <div class="container section__grid">
         <h2 class="section__label" id="scope">Scope</h2>
-        <div class="section__body measure">
+        <div class="section__body">
           <p>
             The workshop covers topics from both computer science and microbiology, with a focus on
             computation emerging from microbiological units — bacteria, viruses, DNA — interacting
@@ -64,7 +63,6 @@
             infection models, and evolutionary models.
           </p>
           <p>
-            <!-- TODO: state the format (in person or hybrid). -->
             CELLS&rsquo;26 is held in Rome, Italy, co-hosted with
             <a href="https://www.disc-conference.org/wp/disc2026/">DISC&nbsp;2026</a>.
           </p>
@@ -76,21 +74,21 @@
       <div class="container section__grid">
         <h2 class="section__label" id="programme">Programme</h2>
         <div class="section__body">
-          <!-- TODO: confirm times against the DISC'26 schedule. -->
           <p>Monday 9 November 2026. Times are local to Rome (CET).</p>
           <ul class="programme">
             <li>
               <p class="time">14:30</p>
               <div class="programme__body">
                 <p class="programme__name"><a href="#speaker-ruess">Jakob Ruess</a></p>
-                <p class="talk">TBA</p>
+                <p class="talk">Coupling stochastic models of single-cell reactions to the dynamics of growing microbial
+                  populations and consortia</p>
               </div>
             </li>
             <li>
               <p class="time">15:30</p>
               <div class="programme__body">
                 <p class="programme__name"><a href="#speaker-di-leonardo">Roberto Di Leonardo</a></p>
-                <p class="talk">TBA</p>
+                <p class="talk">Programming cell behavior with light</p>
               </div>
             </li>
             <li>
@@ -124,10 +122,11 @@
           <p>The CELLS&rsquo;26 speakers are, in alphabetical order:</p>
 
           <article class="speaker" id="speaker-di-leonardo">
-            <img class="speaker__photo" src="./img/dileonardo.jpg" alt="Roberto Di Leonardo">
+            <div class="speaker__photo">
+              <img src="./img/dileonardo-portrait.jpg" alt="Roberto Di Leonardo" width="600" height="900">
+            </div>
             <h3 class="speaker__name"><a href="https://www.roma1.infn.it/~dileorob/">Roberto Di Leonardo</a></h3>
             <p class="speaker__affiliation">Sapienza University of Rome</p>
-            <p class="speaker__title">Programming cell behavior with light</p>
             <p class="speaker__bio"><span class="label">Bio. </span>Roberto Di Leonardo is Full Professor in the
               Department of Physics at Sapienza University of Rome, where he teaches biophysics. After a Ph.D. in
               physics from the University of L’Aquila, he moved to Sapienza University as a CNR researcher. As a
@@ -139,6 +138,7 @@
               His honors include the Premio Le Scienze, a Presidential Medal in Italy, and multiple ERC grants,
               including a Starting Grant (2012), Proof of Concept Grants (2017 and 2026), and an Advanced Grant (2018).
             </p>
+            <p class="speaker__title">Programming cell behavior with light</p>
             <p class="speaker__abstract"><span class="label">Abstract.</span> In this talk, I will focus on three
               light-activated proteins from evolutionarily diverse unicellular organisms and show how they can serve as
               optical interfaces to program motility and gene expression. Using a light-driven proton pump, we establish
@@ -155,11 +155,11 @@
           </article>
 
           <article class="speaker" id="speaker-ruess">
-            <img class="speaker__photo" src="./img/ruess.jpg" alt="Jakob Ruess">
+            <div class="speaker__photo">
+              <img src="./img/ruess-portrait.jpg" alt="Jakob Ruess" width="600" height="900">
+            </div>
             <h3 class="speaker__name"><a href="https://www.inria.fr/en/jakob-ruess">Jakob Ruess</a></h3>
             <p class="speaker__affiliation">Inria</p>
-            <p class="speaker__title">Coupling stochastic models of single-cell reactions to the dynamics of growing
-              microbial populations and consortia</p>
             <p class="speaker__bio"><span class="label">Bio.</span>
               Jakob Ruess received his PhD in 2015 from the Automatic Control Laboratory at ETH Zurich, Switzerland,
               where he worked under the supervision of John Lygeros on using moment equations of stochastic reaction
@@ -170,6 +170,8 @@
               team in close collaboration with experimental biologists. In 2022, he received an ERC Starting Grant on
               studying the dynamics of coupled stochastic single-cell and population processes and moved to Inria Saclay
               to carry out this research project.</p>
+            <p class="speaker__title">Coupling stochastic models of single-cell reactions to the dynamics of growing
+              microbial populations and consortia</p>
             <p class="speaker__abstract"><span class="label">Abstract.</span>
               At the single-cell level, biochemical processes are inherently stochastic. Such processes are typically
               studied using models based on stochastic chemical kinetics, governed by a chemical master equation (CME).
@@ -193,14 +195,11 @@
           </article>
 
           <article class="speaker" id="speaker-venturelli">
-            <!-- Replace this placeholder with the photograph when it arrives:
-               <img class="speaker__photo" src="../assets/img/venturelli.jpg" alt=""> -->
-            <div class="speaker__placeholder" role="img" aria-label="Photograph of Ophelia Venturelli to follow">OV
-            </div>
+            <div class="speaker__placeholder" role="img" aria-label="Photograph of Ophelia Venturelli to follow">OV</div>
             <h3 class="speaker__name"><a href="https://www.venturellilab.org/">Ophelia Venturelli</a></h3>
             <p class="speaker__affiliation">Duke University</p>
-            <p class="speaker__title">TBA</p>
             <p class="speaker__bio"><span class="label">Bio.</span> TBA</p>
+            <p class="speaker__title">TBA</p>
             <p class="speaker__abstract"><span class="label">Abstract.</span> TBA</p>
           </article>
 
@@ -211,7 +210,7 @@
     <section class="section" aria-labelledby="registration">
       <div class="container section__grid">
         <h2 class="section__label" id="registration">Registration</h2>
-        <div class="section__body measure">
+        <div class="section__body">
           <p>
             Registration for CELLS&rsquo;26 goes through
             <a href="https://www.disc-conference.org/wp/disc2026/">DISC&nbsp;2026</a>.
